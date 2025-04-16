@@ -15,7 +15,6 @@ const validateToken = asyncHandler(async (req, res, next) => {
     if (err) {
       return res.status(403).json({ error: "Invalid or expired token" });
     }
-
     req.user = decoded; // Attach user info to request
     next();
   });

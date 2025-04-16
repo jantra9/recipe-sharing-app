@@ -1,4 +1,4 @@
-import cors from "cors";
+const cors= require( "cors");
 require("dotenv").config();
 
 //CORS config options

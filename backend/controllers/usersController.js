@@ -37,7 +37,7 @@ async function loginUser(req, res){
             const accessToken= jwt.sign({
                 user:{
                     username:existingUser.username,
-                    email:existingUser.email
+                    id:existingUser.id,
                 }
             },process.env.SECRETKEY,
             {expiresIn:"1h"});
